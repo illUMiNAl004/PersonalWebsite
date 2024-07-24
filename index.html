@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Add this CSS rule */
+        .dark-mode #main {
+            background-color: black;
+            color: white; /* Optional: Change text color to white for better readability */
+        }
+    </style>
 </head>
-    <body class="is-preload">
+<body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
@@ -26,17 +33,24 @@
                 <img src="images/logo.png" alt="Logo" class="logo-img" />
             </a>
         </div>
-        
+
+        <ul class="actions">
+            <li><button id="dark-mode-button" class="primary button">Dark Mode</button></li>
+        </ul>
 
         <!-- Intro -->
         <div id="intro">
             <h1>Hey, I am<br />
-            Tanishq Saria.</h1>
+            <span class="rotating-text"> <span id="dynamic-text" style="color: #35ff5d;"></span></span></h1>
             <p class="about-me">Software Engineering Fellow @ Headstarter AI | Computer Science @ UMass Amherst | Tech Enthusiast
-                <br> An aspiring Software Engineer interested in Quantum Computing and Artificial Intelligence</p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+            <br> An Aspiring Software Engineer interested in Quantum Computing and Artificial Intelligence</p>
+            
+            <ul class="actions2" style="list-style: none; margin: 0; padding-top: 150px;">
+                <li style="list-style: none;">
+                    <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
+                </li>
             </ul>
+            
         </div>
 
         <!-- Header -->
@@ -60,18 +74,16 @@
         <div id="main">
             <!-- Featured Post -->
             <article class="post">
-                <header class="major">
-                    <h2><a href="#">About me</a></h2>
-                    <p>As an aspiring Software Engineer with a keen interest in Quantum Computing and Artificial Intelligence, I blend a rigorous analytical mindset with a passion for technological innovation. My academic journey, highlighted by a scholarship in the form of a Chancellor's Award from the University of Massachusetts Amherst, underscores a commitment to excellence and a deep-seated curiosity about Technology. 
+                <h1 class="center-text"><a href="#">About me</a></h1>
+                <header class="major-center-text">
+                    <p>As an aspiring Software Engineer deeply interested in Quantum Computing and Artificial Intelligence, I blend a rigorous analytical mindset with a passion for technological innovation. My academic journey, highlighted by a Chancellor's Award from the University of Massachusetts Amherst, showcases my commitment to excellence and a deep curiosity about technology.
                         <br> <br>Fascinated by Innovation, always striving and working towards the same.<br> <br>
-                        Beyond technology, my love for photography allows me to explore the interplay between light and perspective, capturing beautiful moments that impact and are photographed to last a lifetime.
-                        Additionally, my interest in art, painting, and drawing fuels my creativity, offering me a unique perspective on design and problem-solving. This artistic passion enriches my approach to technology, blending aesthetics with functionality in the solutions I develop, while also helping me relax.
-                        <br> <br> Driven by the incredible power of technology to tackle complex problems and spark change, I'm all about creating smarter, more efficient software that can make a real difference. I'm excited about the potential for collaborative innovation to shape a smarter, more connected future. If you're on the same wavelength, let's connect and explore how we can work together to turn visionary ideas into reality. 
-                    </p>
+                        Beyond technology, my love for photography allows me to explore the interplay between light and perspective, capturing beautiful moments that tell compelling stories. This passion for art, painting, and drawing fuels my creativity, offering a unique perspective on design and problem-solving. This artistic side enriches my approach to technology, helping me blend aesthetics with functionality in the solutions I develop.
+                        <br> <br> Driven by the transformative power of technology to solve complex problems and inspire change, I'm dedicated to creating smarter, more efficient software that makes a real difference. I'm excited about the potential for collaborative innovation to shape a smarter, more connected future. If you're on the same wavelength, let's connect and explore how we can work together to turn visionary ideas into reality.</p>
                 </header>
                 <a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
                 <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
+                    <li><a href="#" class="primary button">Full Story</a></li>
                 </ul>
             </article>
 
@@ -86,24 +98,24 @@
             <section class="split contact">
                 <section class="alt">
                     <h3>Address</h3>
-                    <p>171 Orchard Hill Dr<br />
+                    <p class="personal-details">171 Orchard Hill Dr<br />
                     Amherst, MA 01003</p>
                 </section>
                 <section>
                     <h3>Phone</h3>
-                    <p><a href="#">+1 (512) 545-5681</a><br><a href="#">+971 (054) 747-0291</a></p>
+                    <p class="personal-details"><a href="#">+1 (512) 545-5681</a><br><a href="#">+971 (054) 747-0291</a></p>
                 </section>
                 <section>
                     <h3>Emails</h3>
-                    <p><a href="#">iamtanishqsaria@gmail.com</a><br><a href="#">tsaria@umass.edu</a></section>
+                    <p class="personal-details"><a href="#">iamtanishqsaria@gmail.com</a><br><a href="#">tsaria@umass.edu</a></section>
                 </section>
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li><a href="#" class="icon brands alt fa-google"><span class="label">Gmail</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:iamtanishqsaria@gmail.com" class="icon brands alt fa-google"><span class="label">Gmail</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/tanishq-s" class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://www.instagram.com/indeed.tani" class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/illUMiNAl004" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
                     </ul>
                 </section>
             </section>
@@ -124,6 +136,82 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        const rotatingTextElement = document.getElementById('dynamic-text');
+        const rotatingTexts = ['','a gamer', 'a visionary', 'an entrepreneur', 'an engineer', 'an artist', 'an archer', 'a designer', 'a student', 'a tech enthusiast', 'a photographer', 'a software developer', 'Tanishq Saria!'];
+        const rotatingColors = ['#fff','#35ff5d', '#ff5733', '#33c3ff', '#ff33a6', '#8d33ff', '#ff8d33', '#33ff57', '#ff3333', '#33ffcc', '#ff33f6', '#335bff', '#35ff5d'];
+        let currentIndex = 0;
+        let rotationCount = 0;
 
+        function updateRotatingText() {
+            if (rotationCount < rotatingTexts.length) {
+                rotatingTextElement.textContent = rotatingTexts[currentIndex];
+                rotatingTextElement.style.color = rotatingColors[currentIndex];
+                currentIndex++;
+                rotationCount++;
+            }
+            if (currentIndex === rotatingTexts.length) {
+                clearInterval(textRotationInterval);
+            }
+        }
+        const textRotationInterval = setInterval(updateRotatingText, 400); // Change speed here (1000ms = 1s)
+
+        // Initialize the first text
+        updateRotatingText();
+    </script>
+
+    <script>
+        document.getElementById('dark-mode-button').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.style.backgroundImage = 'url("darkbg.jpg")';
+            } else {
+                document.body.style.backgroundImage = 'url("unsplash.jpg")';
+            }
+        });
+    </script>
+
+    <script>
+        // Unsplash Access Key
+        const UNSPLASH_ACCESS_KEY = '0wJ2oY2UXnu0rdlDkG6BT0YwJbSs-Vq5oz2bxPysOgg'; // Replace with your Unsplash access key
+    
+        // Function to fetch and set a random wallpaper
+        function setRandomWallpaper() {
+            console.log("Fetching new wallpaper...");
+            fetch(`https://api.unsplash.com/photos/random?client_id=${UNSPLASH_ACCESS_KEY}&orientation=landscape`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    console.log("Response received:", response);
+                    return response.json();
+                })
+                .then(data => {
+                    const imageUrl = data.urls.full;
+                    console.log("Image URL:", imageUrl);
+                    document.body.style.backgroundImage = `url(${imageUrl})`;
+                    document.body.style.backgroundSize = 'cover';
+                    document.body.style.backgroundPosition = 'center';
+                    document.body.style.transition = 'background 1s ease-in-out'; // Smooth transition
+                })
+                .catch(error => console.error('Error fetching the image:', error));
+        }
+    
+        // Optionally, set an initial wallpaper
+        setRandomWallpaper();
+    </script>
+    
+    <script>
+        // Check for dark mode on page load
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.body.style.backgroundImage = 'url("darkbg.jpg")';
+        } else {
+            document.body.style.backgroundImage = 'url("unsplash.jpg")';
+        }
+    </script>
+    
 </body>
 </html>
