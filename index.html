@@ -40,12 +40,19 @@
 
         <!-- Intro -->
         <div id="intro">
-            <h1>Hey, I am<br />
+            <h1>hey, I am<br />
             <span class="rotating-text"> <span id="dynamic-text" style="color: #35ff5d;"></span></span></h1>
-            <p class="about-me">Software Engineering Fellow @ Headstarter AI | Computer Science @ UMass Amherst | Tech Enthusiast
-            <br> An Aspiring Software Engineer interested in Quantum Computing and Artificial Intelligence</p>
             
-            <ul class="actions2" style="list-style: none; margin: 0; padding-top: 150px;">
+            
+            <p class="about-me"><strong>Software Engineering Fellow @ Headstarter AI | Computer Science @ UMass Amherst | Tech Enthusiast</strong>
+            <br> At the crossroads of <strong><span style="color: #35ff5d;">Quantum Computing</span></strong> and <strong><span style="color: #00ffe5;">Artificial Intelligence</span></strong>, I find my passion and purpose. 
+            <br><strong>Join me as I <span style="color: #ffc400;">navigate the tech frontier</span></strong> and <strong><span style="color: #ffff00;">innovate for tomorrow</span></strong>.
+
+            </p>
+            
+            <h2><span style="border-bottom: 2px dotted #0dff00;">welcome to my personal portfolio</span></h2>
+
+            <ul class="actions2" style="list-style: none; margin: 0; padding-top: 100px;">
                 <li style="list-style: none;">
                     <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
                 </li>
@@ -149,6 +156,16 @@
             if (rotationCount < rotatingTexts.length) {
                 rotatingTextElement.textContent = rotatingTexts[currentIndex];
                 rotatingTextElement.style.color = rotatingColors[currentIndex];
+                rotatingTextElement.style.textShadow = `
+                    -2px -2px 0 #000,  
+                    2px -2px 0 #000,
+                    -2px 2px 0 #000,
+                    2px 2px 0 #000,
+                    0px -2px 0 #000,
+                    0px 2px 0 #000,
+                    -2px 0px 0 #000,
+                    2px 0px 0 #000
+                `; // Add smooth black outline
                 currentIndex++;
                 rotationCount++;
             }
@@ -165,13 +182,22 @@
     <script>
         document.getElementById('dark-mode-button').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            const bgElement = document.querySelector('#wrapper > .bg');
             if (document.body.classList.contains('dark-mode')) {
-                document.body.style.backgroundImage = 'url("darkbg.jpg")';
+                localStorage.setItem('darkMode', 'enabled');
+                bgElement.style.backgroundImage = 'url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/darkbg.jpg")';
             } else {
-                document.body.style.backgroundImage = 'url("unsplash.jpg")';
+                localStorage.setItem('darkMode', 'disabled');
+                bgElement.style.backgroundImage = 'url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg")';
             }
         });
+
+        // Check the dark mode state on page load
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            const bgElement = document.querySelector('#wrapper > .bg');
+            bgElement.style.backgroundImage = 'url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/darkbg.jpg")';
+        }
     </script>
 
     <script>
