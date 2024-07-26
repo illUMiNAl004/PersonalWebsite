@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Tanishq Saria</title>
+    <title>Home - Tanishq Saria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -11,7 +11,15 @@
         /* Add this CSS rule */
         .dark-mode #main {
             background-color: black;
-            color: white; /* Optional: Change text color to white for better readability */
+            color: rgb(0, 0, 0); /* Optional: Change text color to white for better readability */
+        }
+    </style>
+    <style>
+        /* Add this CSS rule */
+        @media (max-width: 768px) {
+            #dark-mode-button {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -36,7 +44,7 @@
         </div>
 
         <ul class="actions">
-            <li><button id="dark-mode-button" class="primary button">Dark Mode</button></li>
+            <li style="padding-bottom: 10px;"><button id="dark-mode-button" class="primary button">Dark Mode</button></li>
         </ul>
 
         <!-- Intro -->
@@ -46,7 +54,7 @@
             
             
             <p class="about-me"><strong>Software Engineering Fellow @ Headstarter AI | Computer Science @ UMass Amherst | Tech Enthusiast</strong>
-            <br> At the crossroads of <strong><span style="color: #35ff5d;">Quantum Computing</span></strong> and <strong><span style="color: #00ffe5;">Artificial Intelligence</span></strong>, I find my passion and purpose. 
+            <br> At the crossroads of <strong><span style="color: #c8ff00;">Quantum Computing</span></strong>, <strong><span style="color: #35ff5d;">Software Development</span></strong> and <strong><span style="color: #00ffe5;">Artificial Intelligence</span></strong>, I find my passion and purpose. 
             <br><strong>Join me as I <span style="color: #ffc400;">navigate the tech frontier</span></strong> and <strong><span style="color: #ffff00;">innovate for tomorrow</span></strong>.
 
             </p>
@@ -69,7 +77,8 @@
             <ul class="links">
                 <li class="active"><a href="index.html">About me</a></li>
                 <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects and Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
             </ul>
             <ul class="actions3" style="list-style: none; padding-bottom: 10px; margin: 0; display: flex; justify-content: center;">
                 <li style="list-style: none;">
@@ -144,8 +153,8 @@
     <script src="assets/js/main.js"></script>
     <script>
         const rotatingTextElement = document.getElementById('dynamic-text');
-        const rotatingTexts = ['','a gamer', 'a visionary', 'an entrepreneur', 'an engineer', 'an artist', 'an archer', 'a designer', 'a student', 'a tech enthusiast', 'a photographer', 'a software developer', 'Tanishq Saria!'];
-        const rotatingColors = ['#fff','#35ff5d', '#ff5733', '#33c3ff', '#ff33a6', '#8d33ff', '#ff8d33', '#33ff57', '#ff3333', '#33ffcc', '#ff33f6', '#335bff', '#35ff5d'];
+        const rotatingTexts = ['','a gamer', 'a visionary', 'an entrepreneur', 'an engineer', 'an artist', 'an archer','awesome', 'a designer', 'a student', 'a tech enthusiast', 'a photographer', 'a software developer', 'Tanishq Saria!'];
+        const rotatingColors = ['#fff','#35ff5d', '#ff5733', '#33c3ff', '#ff33a6', '#8d33ff', '#ff8d33', '#33ff57', '#ff3333', '#33ffcc', '#ff33f6', '#ff5bff', '#35ff5d'];
         let currentIndex = 0;
         let rotationCount = 0;
 

@@ -64,6 +64,12 @@ body {
     display: flex; /* Center the icon within the circle */
     align-items: center; /* Center the icon vertically */
     justify-content: center; /* Center the icon horizontally */
+    font-size: 25px; /* Increase the size of the icons */
+    margin-right: 10px; /* Add a gap between the icons */
+}
+
+.icons-alt .icon:last-child {
+    margin-right: 0; /* Remove the margin from the last icon */
 }
 
 /* Style for the logo container */
@@ -1973,13 +1979,13 @@ input, select, textarea {
 		display: inline-block;
 		padding: 0.5em 1em;
 		margin: 0.2em;
-		border: 2px solid #35ff5d; /* Adjust border color as needed */
+		border: 4px solid #35ff5d; /* Adjust border color as needed */
 		border-radius: 5px;
-		background-color: #fff; /* Adjust background color as needed */
-		color: #000; /* Adjust text color as needed */
+		background-color: #ffffff; /* Adjust background color as needed */
+		color: #000000; /* Adjust text color as needed */
 		text-align: center;
 		font-weight: bold;
-		cursor: pointer;
+		cursor: none;
 		transition: background-color 0.3s, color 0.3s;
 	}
 
@@ -2669,8 +2675,8 @@ input, select, textarea {
 
 	/* Dark mode styles */
 	body.dark-mode {
-		background-color: #000;
-		color: #fff;
+		background-color: #000 !important;
+		color: #000000;
 	}
 
 	body.dark-mode a {
@@ -2678,14 +2684,14 @@ input, select, textarea {
 	}
 
 	body.dark-mode .button {
-		background-color: #333;
-		color: #fff;
+		background-color: #000000 !important;
+		color: #35ff5d; /* Colored text */
 		border-color: #35ff5d;
 	}
 
 	body.dark-mode .button:hover {
-		background-color: #35ff5d;
-		color: #000;
+		background-color: #35ff5d !important; /* Colored background */
+		color: #000000 !important; /* Black text */
 	}
 
 	/* Ensure all body text is normal and non-italic */
@@ -2715,12 +2721,29 @@ input, select, textarea {
 		width: 50%; /* Adjust the width as needed */
 	}
 
+	.iconz .icon {
+		font-size: 25px; /* Increase the size of the icons */
+		margin-right: 15px; /* Add a gap between the icons */
+		border: 2px solid #35ff5d; /* Add a border around the icons */
+		border-radius: 0; /* Make the border circular */
+		padding-top: 2px; /* Add some padding inside the border */
+		padding-right: 10px;
+		padding-bottom: 2px;
+		padding-left: 10px;
+		display: inline-block; /* Ensure the border wraps around the icon */
+		text-align: center; /* Center the icon within the border */
+	}
+	
+	.iconz .icon:last-child {
+		margin-right: 0; /* Remove the margin from the last icon */
+	}
+
 	/* Flexbox for skills list */
 	.skills-list {
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
-		padding: 0;
+		padding-bottom: 1em;
 		margin: 0;
 	}
 
@@ -3684,7 +3707,7 @@ input, select, textarea {
 		}
 
 		#nav ul.icons li a.icon:hover:before {
-			color: #ff3535;
+			color: #35c9ff;
 		}
 
 		#nav ul.icons.alt li .icon:before {
