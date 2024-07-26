@@ -72,7 +72,7 @@ body {
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 100px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+    height: 100px; /* Maintain aspect ratio */
     border-radius: 100%;
     overflow: hidden;
     z-index: 1000; /* Ensure it stays on top */
@@ -1133,6 +1133,26 @@ input, select, textarea {
 
 		}
 
+/* Add background color and padding to the posts */
+.posts article {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Add hover effects */
+.posts article:hover {
+    transform: scale(1.05); /* Slightly enlarge the post */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Ensure the images fit within the new post style */
+.posts article .image.fit {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 		@media screen and (max-width: 480px) {
 
 			.row {
@@ -1871,6 +1891,51 @@ input, select, textarea {
 							padding-top: 3rem;
 						}
 
+		}
+
+		/* Add background color and padding to the posts */
+		.posts article {
+			background-color: #f0f0f0; /* Light grey background */
+			padding: 20px;
+			border-radius: 10px;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+
+		/* Add hover effects */
+		.posts article:hover {
+			transform: scale(1.05); /* Slightly enlarge the post */
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+		}
+
+		/* Ensure the images fit within the new post style */
+		.posts article .image.fit {
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		/* Add background color and padding to the posts */
+		/* Add gradient background, border, and shadow to the posts */
+		/* Minimalistic design for the posts */
+		#main .post {
+			background-color: #fff; /* White background */
+			padding: 20px;
+			border: 10px solid #00ff5e; /* Light grey border */
+			border-radius: 0px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+			transition: transform 0.3s, box-shadow 0.3s, border-color 0.5s;
+		}
+
+		/* Add hover effects */
+		#main .post:hover {
+			border-color: #35ff5d; /* Change border color on hover */
+			transform: translateY(-5px); /* Slightly lift the post */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+		}
+
+		/* Ensure the images fit within the new post style */
+		#main .post .image.fit {
+			border-radius: 10px;
+			overflow: hidden;
 		}
 
 /* Box */

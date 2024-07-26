@@ -53,7 +53,7 @@
 
             <ul class="actions2" style="list-style: none; margin: 0; padding-top: 100px;">
                 <li style="list-style: none;">
-                    <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
+                    <a href="#header" class="primary button icon solid solo fa-arrow-down scrolly">Continue</a>
                 </li>
             </ul>
             
@@ -90,9 +90,7 @@
                         <br> <br> Driven by the transformative power of technology to solve complex problems and inspire change, I'm dedicated to creating smarter, more efficient software that makes a real difference. I'm excited about the potential for collaborative innovation to shape a smarter, more connected future. If you're on the same wavelength, let's connect and explore how we can work together to turn visionary ideas into reality.</p>
                 </header>
                 <a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-                <ul class="actions special">
-                    <li><a href="#" class="primary button">Full Story</a></li>
-                </ul>
+                
             </article>
 
             <!-- Posts -->
@@ -197,36 +195,6 @@
             const bgElement = document.querySelector('#wrapper > .bg');
             bgElement.style.backgroundImage = 'url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/darkbg.jpg")';
         }
-    </script>
-
-    <script>
-        // Unsplash Access Key
-        const UNSPLASH_ACCESS_KEY = '0wJ2oY2UXnu0rdlDkG6BT0YwJbSs-Vq5oz2bxPysOgg'; // Replace with your Unsplash access key
-    
-        // Function to fetch and set a random wallpaper
-        function setRandomWallpaper() {
-            console.log("Fetching new wallpaper...");
-            fetch(`https://api.unsplash.com/photos/random?client_id=${UNSPLASH_ACCESS_KEY}&orientation=landscape`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    console.log("Response received:", response);
-                    return response.json();
-                })
-                .then(data => {
-                    const imageUrl = data.urls.full;
-                    console.log("Image URL:", imageUrl);
-                    document.body.style.backgroundImage = `url(${imageUrl})`;
-                    document.body.style.backgroundSize = 'cover';
-                    document.body.style.backgroundPosition = 'center';
-                    document.body.style.transition = 'background 1s ease-in-out'; // Smooth transition
-                })
-                .catch(error => console.error('Error fetching the image:', error));
-        }
-    
-        // Optionally, set an initial wallpaper
-        setRandomWallpaper();
     </script>
     
     <script>
